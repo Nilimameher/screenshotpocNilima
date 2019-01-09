@@ -13,6 +13,7 @@ gem 'rails', '~> 5.1.6'
 #gem 'sqlite3'
 gem 'pg'
 # Use Puma as the app server
+gem 'rack-cors', :require => 'rack/cors'
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
