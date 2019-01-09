@@ -1,2 +1,141 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+  <h2>Dome Application for screenshot</h2>
+</header>
+
+<section>
+  <nav>
+  </nav>
+  
+  <article>
+      <h1>Take a screenshot</h1> 
+  </article>
+</section>
+<footer>
+  <button type="button">Click Me!</button>
+</footer>
+<script>
+    
+    $(document).ready(function(){
+  $("button").click(function(){
+      debugger;
+    $.ajax({"url": "https://www.geoscreenshot.com/api/ws/capture",
+          "method": "POST",
+          "timeout": 0,
+          "headers": {
+              'Authorization': '6d34ada2f339d253d70a30ec97f3bb3a'
+              },
+  "data": "{https://www.invisalign.com/}",
+            success: function(response){
+                console.log(response);
+//      $("#div1").html(result);
+    }});
+  });
+});
+//    function screenshot(){
+//        debugger;
+//        var settings = {
+//          "url": "https://www.geoscreenshot.com/api/ws/capture",
+//          "method": "POST",
+//          "timeout": 0,
+//          "headers": {
+//                "Content-Type": "6d34ada2f339d253d70a30ec97f3bb3a"
+//              },
+//  "data": "{https://www.invisalign.com/}",
+//}; 
+//        
+//$.ajax(settings).done(function (response) {
+//  console.log(response);
+//});   
+//        
+////var settings = {
+////  "url": "https://www.geoscreenshot.com/api/ws/capture",
+////  "method": "POST",
+////  "timeout": 0,
+////  "headers": {
+////    "Content-Type": "json"
+////  },
+////  "data": "{\n\t\"url\":\"httpbin.org/ip\",\n\t\"location\":\"au-nsw-syd\",\n\t\"no_cache\": 1,\n\t\"html\": 1\n}",
+////};
+////$.ajax(settings).done(function (response) {
+////  console.log(response);
+////});
+////        
+//    }
+//trying......
+    
+</script>
+</body>
+</html>
